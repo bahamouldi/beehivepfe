@@ -50,9 +50,9 @@ PATH_TRAVERSAL_PATTERNS = [
 SSRF_PATTERNS = [
     r"169\.254\.169\.254",  # AWS metadata
     r"metadata\.google\.internal",  # GCP metadata
-    r"127\.0\.0\.1|localhost",  # Loopback
-    r"file:///|file://",  # File protocol
-    r"gopher://|dict://|ftp://",  # Alternative protocols
+    r"(url|target|redirect|proxy|host|src|href).*?(localhost|127\.0\.0\.1)",  # Loopback in parameters
+    r"file:///",  # File protocol
+    r"(gopher|dict|ftp)://",  # Alternative protocols
 ]
 
 # ==================== XXE PATTERNS ====================
@@ -109,7 +109,8 @@ ALLOW_PATHS = [p.strip() for p in ALLOW_PATHS if p.strip()]
 
 
 def _headers_to_text(headers: Dict[str, str]) -> str:
-    return ' '.join(f"{k}:{v}" for k, v in headers.items())
+    # Exclude Host header to avoid false positives with 127.0.0.1:port
+    return ' '.join(f"{k}:{v}" for k, v in headers.items() if k.lower() != 'host')
 
 
 def check_regex_rules(path: str, body: str, headers: Dict[str, str]) -> Tuple[bool, str]:

@@ -32,6 +32,12 @@ async def waf_middleware(request: Request, call_next):
     path = request.url.path
     body = await request.body()
     body_text = body.decode('utf-8', errors='ignore') if body else ''
+    
+    # Store body for later use (avoid double reading)
+    async def receive():
+        return {"type": "http.request", "body": body}
+    
+    request._receive = receive
 
     allowed, remaining = rate_limiter.allow_request(client)
     if not allowed:
