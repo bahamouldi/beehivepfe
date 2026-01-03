@@ -2,19 +2,67 @@ import re
 import os
 from typing import Dict, Tuple, List
 
-# Default patterns for common attacks
+# ==================== SQL INJECTION PATTERNS ====================
 SQLI_PATTERNS = [
     r"\b(select|union|insert|update|delete|drop)\b",
     r"--",
     r"/\*.*\*/",
     r"\bor\b\s+\d+\s*=",
+    r"'.*or.*'.*'.*=.*'",  # NEW: Détecte 1' OR '1'='1
+    r"\bsleep\s*\(",  # NEW: Time-based blind SLEEP(5)
+    r"\bbenchmark\s*\(",  # NEW: Time-based blind BENCHMARK
+    r"\bwaitfor\b.*\bdelay\b",  # NEW: MSSQL WAITFOR DELAY
+    r"\bexec\b|\bexecute\b",  # NEW: EXEC/EXECUTE commands
 ]
+
+# ==================== XSS PATTERNS ====================
 XSS_PATTERNS = [
     r"<script.*?>",
     r"onerror\s*=",
     r"javascript:\s*",
     r"<img\s+src=",
+    r"<svg[^>]*onload",  # NEW: <svg/onload=alert(1)>
+    r"<iframe[^>]*src",  # NEW: <iframe src=...>
+    r"<object[^>]*data",  # NEW: <object data=...>
+    r"<embed[^>]*src",  # NEW: <embed src=...>
+    r"on\w+\s*=",  # NEW: All event handlers (onclick, onerror, etc.)
 ]
+
+# ==================== COMMAND INJECTION PATTERNS ====================
+CMDI_PATTERNS = [
+    r"[;|&]\s*(whoami|id|ls|cat|wget|curl|nc|bash|sh|cmd|uname|pwd)",
+    r"`.*`",  # Backticks: `whoami`
+    r"\$\(.*\)",  # Command substitution: $(whoami)
+    r"%0a|%0d",  # Newline injection
+]
+
+# ==================== PATH TRAVERSAL / LFI PATTERNS ====================
+PATH_TRAVERSAL_PATTERNS = [
+    r"\.\./|\.\.\\/",  # ../ or ..\
+    r"%2e%2e%2f|%2e%2e/|%2e%2e%5c",  # Encoded ../
+    r"\.\.%2f|\.\.%5c",  # Partially encoded
+    r"\.\.\.\./+|\.\.\.\.\\+",  # Double slash evasion: ....//
+    r"/etc/passwd|/etc/shadow|/etc/hosts",  # Unix sensitive files
+    r"c:\\windows\\|c:/windows/",  # Windows paths
+]
+
+# ==================== SSRF PATTERNS ====================
+SSRF_PATTERNS = [
+    r"169\.254\.169\.254",  # AWS metadata
+    r"metadata\.google\.internal",  # GCP metadata
+    r"127\.0\.0\.1|localhost",  # Loopback
+    r"file:///|file://",  # File protocol
+    r"gopher://|dict://|ftp://",  # Alternative protocols
+]
+
+# ==================== XXE PATTERNS ====================
+XXE_PATTERNS = [
+    r"<!ENTITY",  # XML Entity declaration
+    r"<!DOCTYPE.*\[",  # DOCTYPE with DTD
+    r"SYSTEM\s+[\"']file://",  # External entity: file://
+]
+
+# ==================== BRUTE FORCE PATTERNS ====================
 BRUTE_PATTERNS = [
     r"(login|password).*(\d{6,})",
 ]
@@ -25,6 +73,14 @@ for p in SQLI_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'sqli'))
 for p in XSS_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'xss'))
+for p in CMDI_PATTERNS:
+    _default_compiled.append((re.compile(p, re.IGNORECASE), 'cmdi'))
+for p in PATH_TRAVERSAL_PATTERNS:
+    _default_compiled.append((re.compile(p, re.IGNORECASE), 'path-traversal'))
+for p in SSRF_PATTERNS:
+    _default_compiled.append((re.compile(p, re.IGNORECASE), 'ssrf'))
+for p in XXE_PATTERNS:
+    _default_compiled.append((re.compile(p, re.IGNORECASE), 'xxe'))
 for p in BRUTE_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'brute'))
 
