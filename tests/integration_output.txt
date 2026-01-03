@@ -1,0 +1,7 @@
+{
+  "status": "ok"
+}
+hello world{"blocked":true,"reason":"regex-sqli"}
+HTTP_CODE:403
+{"blocked":true,"reason":"regex-xss"}
+HTTP_CODE:403

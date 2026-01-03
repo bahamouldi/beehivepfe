@@ -1,0 +1,2001 @@
+path,body,headers,label
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.137""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.117""}",1
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.61""}",1
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.165""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.150""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.193""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.226""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.166""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.62""}",1
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.43""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.49""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.221""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.229""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.69""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.216""}",1
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.232""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.117""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.105""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.86""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.55""}",1
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.58""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.217""}",1
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.60""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.83""}",1
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.193""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.243""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.8""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.17""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.16""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.19""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.57""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.90""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.33""}",1
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.206""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.244""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.66""}",1
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.239""}",1
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.204""}",1
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.207""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.187""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.183""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.245""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.180""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.54""}",1
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.112""}",1
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.67""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.7""}",1
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.90""}",1
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.21""}",1
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.23""}",1
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.126""}",1
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.98""}",1
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.203""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.154""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.166""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.245""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.13""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.86""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.107""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.6""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.185""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.77""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.120""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.69""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.154""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.118""}",1
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.200""}",1
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.184""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.143""}",1
+/echo,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.3""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.7""}",1
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.85""}",1
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.121""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.140""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.244""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.106""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.171""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.100""}",1
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.199""}",1
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.198""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.213""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.161""}",1
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.109""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.61""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.118""}",1
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.97""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.203""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.31""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.136""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.86""}",1
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.26""}",1
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.194""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.5""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.24""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.25""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.29""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.153""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.49""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.164""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.64""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.119""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.8""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.108""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.150""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.220""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.119""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.251""}",1
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.168""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.3""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.184""}",1
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.26""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.76""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.109""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.115""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.125""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.73""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.68""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.45""}",1
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.49""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.111""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.63""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.95""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.52""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.105""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.87""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.113""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.80""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.88""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.8""}",1
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.10""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.180""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.84""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.219""}",1
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.108""}",1
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.55""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.9""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.28""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.83""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.183""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.217""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.105""}",1
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.155""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.67""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.103""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.224""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.22""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.56""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.239""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.46""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.79""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.111""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.87""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.80""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.129""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.93""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.102""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.161""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.99""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.193""}",1
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.135""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.88""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.88""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.24""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.109""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.145""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.203""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.33""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.29""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.115""}",1
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.113""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.212""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.25""}",1
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.53""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.77""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.237""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.77""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.212""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.238""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.224""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.172""}",1
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.61""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.141""}",1
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.57""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.237""}",1
+/login,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.172""}",1
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.134""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.119""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.236""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.45""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.87""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.13""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.27""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.73""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.158""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.38""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.27""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.187""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.42""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.249""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.197""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.122""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.219""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.14""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.230""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.3""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.188""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.115""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.221""}",1
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.14""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.168""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.100""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.39""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.191""}",1
+/api/v1/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.25""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.146""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.104""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.172""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.157""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.189""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.70""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.4""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.157""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.242""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.210""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.56""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.173""}",1
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.189""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.200""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.254""}",1
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.61""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.129""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.250""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.128""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.73""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.177""}",1
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.237""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.43""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.135""}",1
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.110""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.13""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.100""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.23""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.12""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.105""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.231""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.231""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.18""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.63""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.241""}",1
+/api/v1/search, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.172""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.100""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.38""}",1
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.38""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.170""}",1
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.175""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.19""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.53""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.23""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.190""}",1
+/api/v1/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.32""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.98""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.165""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.162""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.112""}",1
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.42""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.28""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.163""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.117""}",1
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.169""}",1
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.84""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.212""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.132""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.210""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.120""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.48""}",1
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.15""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.2""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.101""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.121""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.37""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.108""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.33""}",1
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.225""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.55""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.30""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.29""}",1
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.81""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.240""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.216""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.240""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.248""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.149""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.117""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.215""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.104""}",1
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.24""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.212""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.191""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.112""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.4""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.34""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.182""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.182""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.132""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.15""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.140""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.125""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.235""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.163""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.106""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.216""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.221""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.138""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.145""}",1
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.213""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.136""}",1
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.252""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.32""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.150""}",1
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.130""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.171""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.70""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.33""}",1
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.211""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.195""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.175""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.157""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.192""}",1
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.34""}",1
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.214""}",1
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.122""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.119""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.151""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.36""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.207""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.223""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.115""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.230""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.197""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.241""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.164""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.99""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.180""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.178""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.212""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.239""}",1
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.3""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.93""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.252""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.131""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.43""}",1
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.199""}",1
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.44""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.190""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.154""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.209""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.143""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.79""}",1
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.7""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.245""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.164""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.239""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.215""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.202""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.155""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.72""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.166""}",1
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.179""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.203""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.223""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.228""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.203""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.50""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.144""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.210""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.143""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.223""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.62""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.238""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.233""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.175""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.204""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.218""}",1
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.18""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.83""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.5""}",1
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.224""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.93""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.83""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.159""}",1
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.204""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.101""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.254""}",1
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.201""}",1
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.192""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.159""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.86""}",1
+/echo,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.215""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.120""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.186""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.60""}",1
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.188""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.37""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.229""}",1
+/api/v1/search,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.216""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.194""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.224""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.102""}",1
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.192""}",1
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.188""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.108""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.135""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/search,' OR '1'='1' -- ,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.245""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.196""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.237""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.89""}",1
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.65""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.158""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.138""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.134""}",1
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.131""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.175""}",1
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.178""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/files,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.138""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.70""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.182""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.94""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.137""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.113""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.71""}",1
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.118""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/profile,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.32""}",1
+/login,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.68""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.234""}",1
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,"' UNION SELECT username, password FROM users --","{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.151""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.56""}",1
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.208""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.222""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.57""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.128""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login, OR 'a'='a,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.209""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.250""}",1
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.87""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<svg/onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.31""}",1
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/comment,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.110""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/comment,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.167""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.73""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/profile,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.104""}",1
+/echo,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.213""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.142""}",1
+/,,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.58""}",1
+/login,1; DROP TABLE users;,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.213""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.32""}",1
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<iframe src='javascript:alert(1)'></iframe>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.43""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/view,../../etc/passwd,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.20""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/echo,<img src=x onerror=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.184""}",1
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/echo,<body onload=alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.14""}",1
+/view,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.231""}",1
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.248""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.202""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,' OR 1=1 --,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.169""}",1
+/api/v1/search,1 OR 1=1,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.246""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/view,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.121""}",1
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/echo,javascript:alert(1),"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.139""}",1
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/api/v1/resource,"{""id"":123}","{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/comment,<script>alert(1)</script>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.113""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,%3Cscript%3Ealert(1)%3C/script%3E,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.122""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/download,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.106""}",1
+/index.html,hello world,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/files,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.55""}",1
+/login,admin'--,"{""User-Agent"": ""malicious-bot"", ""X-Forwarded-For"": ""192.0.2.140""}",1
+/index.html,hello world,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0
+/,,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""python-requests/2.28"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/login,username=user&password=pass123,"{""User-Agent"": ""Mozilla/5.0"", ""Accept"": ""*/*""}",0
+/search,q=test,"{""User-Agent"": ""curl/7.68.0"", ""Accept"": ""*/*""}",0

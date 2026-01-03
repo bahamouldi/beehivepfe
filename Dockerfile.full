@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+WORKDIR /app
+
+# Install system deps for clamav and building wheels if needed
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libblas-dev \
+    liblapack-dev \
+    gfortran \
+    wget \
+    clamav \
+    clamav-daemon \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt ./
+# Install core Python dependencies explicitly to avoid failing on optional packages
+RUN pip install --no-cache-dir -U pip setuptools wheel && \
+    pip install --no-cache-dir fastapi==0.95.2 uvicorn==0.22.0 python-multipart aiofiles requests httpx numpy scikit-learn || true
+
+COPY . /app
+ENV PYTHONUNBUFFERED=1
+EXPOSE 8000
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

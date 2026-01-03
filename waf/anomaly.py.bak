@@ -1,0 +1,71 @@
+"""Anomaly detector: use sklearn.IsolationForest if available, else fallback to simple z-score detector."""
+import numpy as np
+
+try:
+    from sklearn.ensemble import IsolationForest
+    SKLEARN_AVAILABLE = True
+except Exception:
+    IsolationForest = None
+    SKLEARN_AVAILABLE = False
+
+class AnomalyDetector:
+    def __init__(self):
+        self.trained = False
+        self._use_sklearn = SKLEARN_AVAILABLE
+        if self._use_sklearn:
+            self.model = IsolationForest(contamination=0.01, random_state=42)
+        else:
+            self.mean = None
+            self.std = None
+
+    def _vectorize(self, path, headers, body):
+        l = len(body)
+        specials = sum(body.count(c) for c in "'\";<>()%")
+        sql_keywords = sum(body.lower().count(k) for k in ['select','union','insert','update','delete','drop'])
+        xss_keywords = body.lower().count('<script') + body.lower().count('javascript:')
+        headers_count = len(headers)
+        return np.array([l, specials, sql_keywords, xss_keywords, headers_count], dtype=float)
+
+    def vectorize(self, path, headers, body):
+        return self._vectorize(path, headers, body).reshape(1, -1)
+
+    def train(self):
+        if self._use_sklearn:
+            # train IsolationForest on synthetic benign samples
+            rng = np.random.RandomState(42)
+            X = []
+            for _ in range(2000):
+                length = max(1, rng.normal(loc=200, scale=100))
+                specials = max(0, rng.poisson(3))
+                sqlk = max(0, int(rng.binomial(1, 0.01)))
+                xssk = max(0, int(rng.binomial(1, 0.005)))
+                hdrs = int(rng.poisson(5))
+                X.append([length, specials, sqlk, xssk, hdrs])
+            X = np.array(X)
+            self.model.fit(X)
+            self.trained = True
+        else:
+            rng = np.random.RandomState(42)
+            X = []
+            for _ in range(1000):
+                length = max(1, rng.normal(loc=200, scale=100))
+                specials = max(0, rng.poisson(3))
+                sqlk = max(0, int(rng.binomial(1, 0.01)))
+                xssk = max(0, int(rng.binomial(1, 0.005)))
+                hdrs = int(rng.poisson(5))
+                X.append([length, specials, sqlk, xssk, hdrs])
+            X = np.array(X)
+            self.mean = X.mean(axis=0)
+            self.std = X.std(axis=0) + 1e-6
+            self.trained = True
+
+    def is_anomaly(self, features):
+        if not self.trained:
+            return False
+        if self._use_sklearn:
+            pred = self.model.predict(features)
+            return pred[0] == -1
+        else:
+            z = np.abs((features - self.mean) / self.std)
+            return bool((z > 6).any())
+

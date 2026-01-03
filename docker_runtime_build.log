@@ -1,0 +1,426 @@
+#0 building with "default" instance using docker driver
+
+#1 [1/6] FROM docker.io/library/python:3.11-slim
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile.runtime
+#2 transferring dockerfile: 469B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [2/6] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 103.99MB 0.5s done
+#6 DONE 0.5s
+
+#7 [3/5] RUN apt-get update && apt-get install -y --no-install-recommends wget clamav && rm -rf /var/lib/apt/lists/*
+#7 9.869 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 9.920 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 10.06 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 10.14 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
+#7 13.05 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 13.11 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [93.7 kB]
+#7 13.74 Fetched 9860 kB in 14s (729 kB/s)
+#7 13.74 Reading package lists...
+#7 14.29 Reading package lists...
+#7 14.78 Building dependency tree...
+#7 14.89 Reading state information...
+#7 15.04 The following additional packages will be installed:
+#7 15.04   clamav-base clamav-freshclam cron cron-daemon-common libapparmor1 libbrotli1
+#7 15.04   libclamav12 libcom-err2 libcurl4t64 libgnutls30t64 libgssapi-krb5-2
+#7 15.04   libidn2-0 libjson-c5 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+#7 15.04   libldap2 libmspack0t64 libnghttp2-14 libnghttp3-9 libp11-kit0 libpopt0
+#7 15.04   libproc2-0 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules-db libssh2-1t64
+#7 15.04   libsystemd-shared libtasn1-6 libtext-charwidth-perl libtext-wrapi18n-perl
+#7 15.04   libunistring5 libxml2 logrotate procps sensible-utils systemd ucf
+#7 15.04 Suggested packages:
+#7 15.04   libclamunrar clamav-doc apparmor anacron checksecurity supercat bat
+#7 15.04   libclamunrar11 gnutls-bin krb5-doc krb5-user libarchive13t64 libbpf1
+#7 15.04   libcryptsetup12 libdw1t64 libelf1t64 libfido2-1 libgcrypt20 libip4tc2
+#7 15.04   libpwquality1 libqrencode4 libtss2-rc0t64 bsd-mailx | mailx
+#7 15.04   systemd-container systemd-homed systemd-userdbd systemd-boot
+#7 15.04   systemd-resolved systemd-repart libtss2-tcti-device0 polkitd
+#7 15.04 Recommended packages:
+#7 15.04   default-mta | mail-transport-agent krb5-locales libldap-common publicsuffix
+#7 15.04   libsasl2-modules libkmod2 psmisc linux-sysctl-defaults
+#7 15.04   default-dbus-system-bus | dbus-system-bus systemd-timesyncd | time-daemon
+#7 15.04   systemd-cryptsetup
+#7 15.32 The following NEW packages will be installed:
+#7 15.32   clamav clamav-base clamav-freshclam cron cron-daemon-common libapparmor1
+#7 15.32   libbrotli1 libclamav12 libcom-err2 libcurl4t64 libgnutls30t64
+#7 15.32   libgssapi-krb5-2 libidn2-0 libjson-c5 libk5crypto3 libkeyutils1 libkrb5-3
+#7 15.32   libkrb5support0 libldap2 libmspack0t64 libnghttp2-14 libnghttp3-9
+#7 15.32   libp11-kit0 libpopt0 libproc2-0 libpsl5t64 librtmp1 libsasl2-2
+#7 15.32   libsasl2-modules-db libssh2-1t64 libsystemd-shared libtasn1-6
+#7 15.32   libtext-charwidth-perl libtext-wrapi18n-perl libunistring5 libxml2 logrotate
+#7 15.32   procps sensible-utils systemd ucf wget
+#7 15.47 0 upgraded, 42 newly installed, 0 to remove and 0 not upgraded.
+#7 15.47 Need to get 27.9 MB of archives.
+#7 15.47 After this operation, 110 MB of additional disk space will be used.
+#7 15.47 Get:1 http://deb.debian.org/debian trixie/main amd64 libsystemd-shared amd64 257.9-1~deb13u1 [2151 kB]
+#7 16.42 Get:2 http://deb.debian.org/debian trixie/main amd64 libapparmor1 amd64 4.1.0-1 [43.7 kB]
+#7 16.51 Get:3 http://deb.debian.org/debian trixie/main amd64 systemd amd64 257.9-1~deb13u1 [3096 kB]
+#7 17.33 Get:4 http://deb.debian.org/debian trixie/main amd64 cron-daemon-common all 3.0pl1-197 [17.8 kB]
+#7 17.33 Get:5 http://deb.debian.org/debian trixie/main amd64 sensible-utils all 0.0.25 [25.0 kB]
+#7 17.40 Get:6 http://deb.debian.org/debian trixie/main amd64 cron amd64 3.0pl1-197 [87.4 kB]
+#7 17.50 Get:7 http://deb.debian.org/debian trixie/main amd64 libpopt0 amd64 1.19+dfsg-2 [43.8 kB]
+#7 17.58 Get:8 http://deb.debian.org/debian trixie/main amd64 logrotate amd64 3.22.0-1 [62.0 kB]
+#7 17.66 Get:9 http://deb.debian.org/debian trixie/main amd64 libproc2-0 amd64 2:4.0.4-9 [65.6 kB]
+#7 17.75 Get:10 http://deb.debian.org/debian trixie/main amd64 procps amd64 2:4.0.4-9 [882 kB]
+#7 18.07 Get:11 http://deb.debian.org/debian trixie/main amd64 libtext-charwidth-perl amd64 0.04-11+b4 [9476 B]
+#7 18.07 Get:12 http://deb.debian.org/debian trixie/main amd64 libtext-wrapi18n-perl all 0.06-10 [8808 B]
+#7 18.07 Get:13 http://deb.debian.org/debian trixie/main amd64 ucf all 3.0052 [43.3 kB]
+#7 18.08 Get:14 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
+#7 18.33 Get:15 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
+#7 18.42 Get:16 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+#7 18.57 Get:17 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+#7 18.59 Get:18 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3 [1465 kB]
+#7 19.09 Get:19 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+#7 19.14 Get:20 http://deb.debian.org/debian trixie/main amd64 wget amd64 1.25.0-2 [984 kB]
+#7 19.64 Get:21 http://deb.debian.org/debian trixie/main amd64 clamav-base all 1.4.3+dfsg-1 [100 kB]
+#7 19.73 Get:22 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+#7 19.84 Get:23 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+#7 19.85 Get:24 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b3 [25.0 kB]
+#7 19.86 Get:25 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+#7 19.88 Get:26 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+#7 19.88 Get:27 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+#7 19.99 Get:28 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+#7 20.14 Get:29 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+#7 20.14 Get:30 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+#7 20.14 Get:31 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+#7 20.20 Get:32 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+#7 20.24 Get:33 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+#7 20.26 Get:34 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+#7 20.28 Get:35 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+#7 20.47 Get:36 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
+#7 20.66 Get:37 http://deb.debian.org/debian trixie/main amd64 libjson-c5 amd64 0.18+ds-1 [46.0 kB]
+#7 20.76 Get:38 http://deb.debian.org/debian trixie/main amd64 libmspack0t64 amd64 0.11-1.1+b1 [53.0 kB]
+#7 20.78 Get:39 http://deb.debian.org/debian trixie/main amd64 libxml2 amd64 2.12.7+dfsg+really2.9.14-2.1+deb13u2 [698 kB]
+#7 21.14 Get:40 http://deb.debian.org/debian trixie/main amd64 libclamav12 amd64 1.4.3+dfsg-1 [7796 kB]
+#7 23.89 Get:41 http://deb.debian.org/debian trixie/main amd64 clamav-freshclam amd64 1.4.3+dfsg-1 [161 kB]
+#7 24.01 Get:42 http://deb.debian.org/debian trixie/main amd64 clamav amd64 1.4.3+dfsg-1 [6941 kB]
+#7 26.38 debconf: unable to initialize frontend: Dialog
+#7 26.38 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 26.38 debconf: falling back to frontend: Readline
+#7 26.38 debconf: unable to initialize frontend: Readline
+#7 26.38 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 42.)
+#7 26.38 debconf: falling back to frontend: Teletype
+#7 26.38 debconf: unable to initialize frontend: Teletype
+#7 26.38 debconf: (This frontend requires a controlling tty.)
+#7 26.38 debconf: falling back to frontend: Noninteractive
+#7 27.35 Preconfiguring packages ...
+#7 27.40 Fetched 27.9 MB in 11s (2555 kB/s)
+#7 27.43 Selecting previously unselected package libsystemd-shared:amd64.
+#7 27.43 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5644 files and directories currently installed.)
+#7 27.44 Preparing to unpack .../libsystemd-shared_257.9-1~deb13u1_amd64.deb ...
+#7 27.45 Unpacking libsystemd-shared:amd64 (257.9-1~deb13u1) ...
+#7 27.58 Selecting previously unselected package libapparmor1:amd64.
+#7 27.58 Preparing to unpack .../libapparmor1_4.1.0-1_amd64.deb ...
+#7 27.59 Unpacking libapparmor1:amd64 (4.1.0-1) ...
+#7 27.65 Setting up libsystemd-shared:amd64 (257.9-1~deb13u1) ...
+#7 27.70 Selecting previously unselected package systemd.
+#7 27.70 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5657 files and directories currently installed.)
+#7 27.70 Preparing to unpack .../systemd_257.9-1~deb13u1_amd64.deb ...
+#7 27.71 Unpacking systemd (257.9-1~deb13u1) ...
+#7 27.88 Selecting previously unselected package cron-daemon-common.
+#7 27.88 Preparing to unpack .../cron-daemon-common_3.0pl1-197_all.deb ...
+#7 27.88 Unpacking cron-daemon-common (3.0pl1-197) ...
+#7 27.93 Selecting previously unselected package sensible-utils.
+#7 27.93 Preparing to unpack .../sensible-utils_0.0.25_all.deb ...
+#7 27.94 Unpacking sensible-utils (0.0.25) ...
+#7 27.99 Setting up libapparmor1:amd64 (4.1.0-1) ...
+#7 28.00 Setting up systemd (257.9-1~deb13u1) ...
+#7 28.06 Created symlink '/etc/systemd/system/getty.target.wants/getty@tty1.service' → '/usr/lib/systemd/system/getty@.service'.
+#7 28.06 Created symlink '/etc/systemd/system/multi-user.target.wants/remote-fs.target' → '/usr/lib/systemd/system/remote-fs.target'.
+#7 28.07 Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-pstore.service' → '/usr/lib/systemd/system/systemd-pstore.service'.
+#7 28.07 Initializing machine ID from random generator.
+#7 28.10 Creating group 'systemd-journal' with GID 999.
+#7 28.10 Creating group 'systemd-network' with GID 998.
+#7 28.10 Creating user 'systemd-network' (systemd Network Management) with UID 998 and GID 998.
+#7 28.13 /usr/lib/tmpfiles.d/legacy.conf:14: Duplicate line for path "/run/lock", ignoring.
+#7 28.15 Setting up cron-daemon-common (3.0pl1-197) ...
+#7 28.20 Creating group 'crontab' with GID 997.
+#7 28.27 Selecting previously unselected package cron.
+#7 28.27 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6643 files and directories currently installed.)
+#7 28.28 Preparing to unpack .../00-cron_3.0pl1-197_amd64.deb ...
+#7 28.28 Unpacking cron (3.0pl1-197) ...
+#7 28.34 Selecting previously unselected package libpopt0:amd64.
+#7 28.35 Preparing to unpack .../01-libpopt0_1.19+dfsg-2_amd64.deb ...
+#7 28.35 Unpacking libpopt0:amd64 (1.19+dfsg-2) ...
+#7 28.41 Selecting previously unselected package logrotate.
+#7 28.41 Preparing to unpack .../02-logrotate_3.22.0-1_amd64.deb ...
+#7 28.42 Unpacking logrotate (3.22.0-1) ...
+#7 28.46 Selecting previously unselected package libproc2-0:amd64.
+#7 28.46 Preparing to unpack .../03-libproc2-0_2%3a4.0.4-9_amd64.deb ...
+#7 28.46 Unpacking libproc2-0:amd64 (2:4.0.4-9) ...
+#7 28.50 Selecting previously unselected package procps.
+#7 28.50 Preparing to unpack .../04-procps_2%3a4.0.4-9_amd64.deb ...
+#7 28.51 Unpacking procps (2:4.0.4-9) ...
+#7 28.57 Selecting previously unselected package libtext-charwidth-perl:amd64.
+#7 28.57 Preparing to unpack .../05-libtext-charwidth-perl_0.04-11+b4_amd64.deb ...
+#7 28.57 Unpacking libtext-charwidth-perl:amd64 (0.04-11+b4) ...
+#7 28.60 Selecting previously unselected package libtext-wrapi18n-perl.
+#7 28.60 Preparing to unpack .../06-libtext-wrapi18n-perl_0.06-10_all.deb ...
+#7 28.61 Unpacking libtext-wrapi18n-perl (0.06-10) ...
+#7 28.65 Selecting previously unselected package ucf.
+#7 28.65 Preparing to unpack .../07-ucf_3.0052_all.deb ...
+#7 28.66 Moving old data out of the way
+#7 28.66 Unpacking ucf (3.0052) ...
+#7 28.71 Selecting previously unselected package libunistring5:amd64.
+#7 28.71 Preparing to unpack .../08-libunistring5_1.3-2_amd64.deb ...
+#7 28.72 Unpacking libunistring5:amd64 (1.3-2) ...
+#7 28.78 Selecting previously unselected package libidn2-0:amd64.
+#7 28.78 Preparing to unpack .../09-libidn2-0_2.3.8-2_amd64.deb ...
+#7 28.78 Unpacking libidn2-0:amd64 (2.3.8-2) ...
+#7 28.82 Selecting previously unselected package libp11-kit0:amd64.
+#7 28.82 Preparing to unpack .../10-libp11-kit0_0.25.5-3_amd64.deb ...
+#7 28.83 Unpacking libp11-kit0:amd64 (0.25.5-3) ...
+#7 28.88 Selecting previously unselected package libtasn1-6:amd64.
+#7 28.88 Preparing to unpack .../11-libtasn1-6_4.20.0-2_amd64.deb ...
+#7 28.88 Unpacking libtasn1-6:amd64 (4.20.0-2) ...
+#7 28.92 Selecting previously unselected package libgnutls30t64:amd64.
+#7 28.92 Preparing to unpack .../12-libgnutls30t64_3.8.9-3_amd64.deb ...
+#7 28.92 Unpacking libgnutls30t64:amd64 (3.8.9-3) ...
+#7 29.00 Selecting previously unselected package libpsl5t64:amd64.
+#7 29.00 Preparing to unpack .../13-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
+#7 29.00 Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#7 29.03 Selecting previously unselected package wget.
+#7 29.03 Preparing to unpack .../14-wget_1.25.0-2_amd64.deb ...
+#7 29.04 Unpacking wget (1.25.0-2) ...
+#7 29.10 Selecting previously unselected package clamav-base.
+#7 29.10 Preparing to unpack .../15-clamav-base_1.4.3+dfsg-1_all.deb ...
+#7 29.11 Unpacking clamav-base (1.4.3+dfsg-1) ...
+#7 29.14 Selecting previously unselected package libbrotli1:amd64.
+#7 29.14 Preparing to unpack .../16-libbrotli1_1.1.0-2+b7_amd64.deb ...
+#7 29.15 Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
+#7 29.19 Selecting previously unselected package libkrb5support0:amd64.
+#7 29.19 Preparing to unpack .../17-libkrb5support0_1.21.3-5_amd64.deb ...
+#7 29.20 Unpacking libkrb5support0:amd64 (1.21.3-5) ...
+#7 29.23 Selecting previously unselected package libcom-err2:amd64.
+#7 29.23 Preparing to unpack .../18-libcom-err2_1.47.2-3+b3_amd64.deb ...
+#7 29.24 Unpacking libcom-err2:amd64 (1.47.2-3+b3) ...
+#7 29.27 Selecting previously unselected package libk5crypto3:amd64.
+#7 29.27 Preparing to unpack .../19-libk5crypto3_1.21.3-5_amd64.deb ...
+#7 29.28 Unpacking libk5crypto3:amd64 (1.21.3-5) ...
+#7 29.31 Selecting previously unselected package libkeyutils1:amd64.
+#7 29.31 Preparing to unpack .../20-libkeyutils1_1.6.3-6_amd64.deb ...
+#7 29.32 Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+#7 29.36 Selecting previously unselected package libkrb5-3:amd64.
+#7 29.36 Preparing to unpack .../21-libkrb5-3_1.21.3-5_amd64.deb ...
+#7 29.36 Unpacking libkrb5-3:amd64 (1.21.3-5) ...
+#7 29.42 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#7 29.42 Preparing to unpack .../22-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
+#7 29.43 Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#7 29.46 Selecting previously unselected package libsasl2-modules-db:amd64.
+#7 29.46 Preparing to unpack .../23-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
+#7 29.46 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#7 29.49 Selecting previously unselected package libsasl2-2:amd64.
+#7 29.50 Preparing to unpack .../24-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
+#7 29.50 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#7 29.54 Selecting previously unselected package libldap2:amd64.
+#7 29.54 Preparing to unpack .../25-libldap2_2.6.10+dfsg-1_amd64.deb ...
+#7 29.55 Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
+#7 29.60 Selecting previously unselected package libnghttp2-14:amd64.
+#7 29.60 Preparing to unpack .../26-libnghttp2-14_1.64.0-1.1_amd64.deb ...
+#7 29.60 Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
+#7 29.65 Selecting previously unselected package libnghttp3-9:amd64.
+#7 29.66 Preparing to unpack .../27-libnghttp3-9_1.8.0-1_amd64.deb ...
+#7 29.66 Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
+#7 29.70 Selecting previously unselected package librtmp1:amd64.
+#7 29.70 Preparing to unpack .../28-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
+#7 29.71 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#7 29.75 Selecting previously unselected package libssh2-1t64:amd64.
+#7 29.75 Preparing to unpack .../29-libssh2-1t64_1.11.1-1_amd64.deb ...
+#7 29.75 Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
+#7 29.79 Selecting previously unselected package libcurl4t64:amd64.
+#7 29.79 Preparing to unpack .../30-libcurl4t64_8.14.1-2+deb13u2_amd64.deb ...
+#7 29.79 Unpacking libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#7 29.84 Selecting previously unselected package libjson-c5:amd64.
+#7 29.84 Preparing to unpack .../31-libjson-c5_0.18+ds-1_amd64.deb ...
+#7 29.85 Unpacking libjson-c5:amd64 (0.18+ds-1) ...
+#7 29.88 Selecting previously unselected package libmspack0t64:amd64.
+#7 29.89 Preparing to unpack .../32-libmspack0t64_0.11-1.1+b1_amd64.deb ...
+#7 29.89 Unpacking libmspack0t64:amd64 (0.11-1.1+b1) ...
+#7 29.93 Selecting previously unselected package libxml2:amd64.
+#7 29.93 Preparing to unpack .../33-libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u2_amd64.deb ...
+#7 29.93 Unpacking libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#7 29.99 Selecting previously unselected package libclamav12:amd64.
+#7 29.99 Preparing to unpack .../34-libclamav12_1.4.3+dfsg-1_amd64.deb ...
+#7 30.00 Unpacking libclamav12:amd64 (1.4.3+dfsg-1) ...
+#7 30.31 Selecting previously unselected package clamav-freshclam.
+#7 30.31 Preparing to unpack .../35-clamav-freshclam_1.4.3+dfsg-1_amd64.deb ...
+#7 30.32 Unpacking clamav-freshclam (1.4.3+dfsg-1) ...
+#7 30.37 Selecting previously unselected package clamav.
+#7 30.37 Preparing to unpack .../36-clamav_1.4.3+dfsg-1_amd64.deb ...
+#7 30.37 Unpacking clamav (1.4.3+dfsg-1) ...
+#7 30.67 Setting up libtext-charwidth-perl:amd64 (0.04-11+b4) ...
+#7 30.68 Setting up libkeyutils1:amd64 (1.6.3-6) ...
+#7 30.69 Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
+#7 30.71 Setting up libmspack0t64:amd64 (0.11-1.1+b1) ...
+#7 30.72 Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
+#7 30.73 Setting up libcom-err2:amd64 (1.47.2-3+b3) ...
+#7 30.75 Setting up libtext-wrapi18n-perl (0.06-10) ...
+#7 30.76 Setting up libkrb5support0:amd64 (1.21.3-5) ...
+#7 30.77 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#7 30.79 Setting up libp11-kit0:amd64 (0.25.5-3) ...
+#7 30.80 Setting up libproc2-0:amd64 (2:4.0.4-9) ...
+#7 30.81 Setting up libunistring5:amd64 (1.3-2) ...
+#7 30.83 Setting up libk5crypto3:amd64 (1.21.3-5) ...
+#7 30.84 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#7 30.86 Setting up libnghttp3-9:amd64 (1.8.0-1) ...
+#7 30.87 Setting up sensible-utils (0.0.25) ...
+#7 30.89 Setting up procps (2:4.0.4-9) ...
+#7 30.93 Setting up libtasn1-6:amd64 (4.20.0-2) ...
+#7 30.94 Setting up libkrb5-3:amd64 (1.21.3-5) ...
+#7 30.96 Setting up libssh2-1t64:amd64 (1.11.1-1) ...
+#7 30.97 Setting up libjson-c5:amd64 (0.18+ds-1) ...
+#7 30.99 Setting up libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#7 31.00 Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
+#7 31.01 Setting up libpopt0:amd64 (1.19+dfsg-2) ...
+#7 31.03 Setting up cron (3.0pl1-197) ...
+#7 31.10 invoke-rc.d: could not determine current runlevel
+#7 31.11 invoke-rc.d: policy-rc.d denied execution of start.
+#7 31.21 Created symlink '/etc/systemd/system/multi-user.target.wants/cron.service' → '/usr/lib/systemd/system/cron.service'.
+#7 31.22 Setting up libidn2-0:amd64 (2.3.8-2) ...
+#7 31.24 Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#7 31.25 Setting up ucf (3.0052) ...
+#7 31.28 Setting up libgnutls30t64:amd64 (3.8.9-3) ...
+#7 31.29 Setting up logrotate (3.22.0-1) ...
+#7 31.43 Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+#7 31.44 Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#7 31.46 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#7 31.47 Setting up clamav-base (1.4.3+dfsg-1) ...
+#7 31.49 id: ‘clamav’: no such user
+#7 31.60 Setting up wget (1.25.0-2) ...
+#7 31.62 Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#7 31.63 Setting up libclamav12:amd64 (1.4.3+dfsg-1) ...
+#7 31.65 Setting up clamav-freshclam (1.4.3+dfsg-1) ...
+#7 31.75 debconf: unable to initialize frontend: Dialog
+#7 31.75 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 31.75 debconf: falling back to frontend: Readline
+#7 31.75 debconf: unable to initialize frontend: Readline
+#7 31.75 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+#7 31.75 debconf: falling back to frontend: Teletype
+#7 31.76 debconf: unable to initialize frontend: Teletype
+#7 31.76 debconf: (This frontend requires a controlling tty.)
+#7 31.76 debconf: falling back to frontend: Noninteractive
+#7 31.82 invoke-rc.d: could not determine current runlevel
+#7 31.82 invoke-rc.d: policy-rc.d denied execution of start.
+#7 31.84 Setting up clamav (1.4.3+dfsg-1) ...
+#7 31.86 Processing triggers for libc-bin (2.41-12) ...
+#7 DONE 32.0s
+
+#8 [4/5] COPY . /app
+#8 DONE 0.3s
+
+#9 [5/5] RUN pip install --no-cache-dir --upgrade pip setuptools wheel &&     pip install --no-cache-dir fastapi uvicorn python-multipart aiofiles requests httpx numpy
+#9 1.825 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (24.0)
+#9 2.075 Collecting pip
+#9 3.529   Downloading pip-25.3-py3-none-any.whl.metadata (4.7 kB)
+#9 3.533 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (79.0.1)
+#9 3.865 Collecting setuptools
+#9 3.980   Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+#9 3.991 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (0.45.1)
+#9 4.204 Downloading pip-25.3-py3-none-any.whl (1.8 MB)
+#9 48.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 37.2 kB/s eta 0:00:00
+#9 49.02 Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+#9 76.73    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 43.5 kB/s eta 0:00:00
+#9 76.83 Installing collected packages: setuptools, pip
+#9 76.83   Attempting uninstall: setuptools
+#9 76.83     Found existing installation: setuptools 79.0.1
+#9 76.86     Uninstalling setuptools-79.0.1:
+#9 77.09       Successfully uninstalled setuptools-79.0.1
+#9 77.67   Attempting uninstall: pip
+#9 77.67     Found existing installation: pip 24.0
+#9 77.72     Uninstalling pip-24.0:
+#9 77.86       Successfully uninstalled pip-24.0
+#9 78.51 Successfully installed pip-25.3 setuptools-80.9.0
+#9 78.51 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 79.50 Collecting fastapi
+#9 79.87   Downloading fastapi-0.127.1-py3-none-any.whl.metadata (30 kB)
+#9 80.01 Collecting uvicorn
+#9 80.13   Downloading uvicorn-0.40.0-py3-none-any.whl.metadata (6.7 kB)
+#9 80.21 Collecting python-multipart
+#9 80.30   Downloading python_multipart-0.0.21-py3-none-any.whl.metadata (1.8 kB)
+#9 80.38 Collecting aiofiles
+#9 80.50   Downloading aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+#9 80.98 Collecting requests
+#9 81.11   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 81.21 Collecting httpx
+#9 81.31   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#9 81.68 Collecting numpy
+#9 81.79   Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#9 81.89 Collecting starlette<0.51.0,>=0.40.0 (from fastapi)
+#9 82.00   Downloading starlette-0.50.0-py3-none-any.whl.metadata (6.3 kB)
+#9 82.25 Collecting pydantic>=2.7.0 (from fastapi)
+#9 82.35   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+#9 82.63 Collecting typing-extensions>=4.8.0 (from fastapi)
+#9 82.74   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 82.92 Collecting annotated-doc>=0.0.2 (from fastapi)
+#9 83.03   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+#9 83.14 Collecting anyio<5,>=3.6.2 (from starlette<0.51.0,>=0.40.0->fastapi)
+#9 83.25   Downloading anyio-4.12.0-py3-none-any.whl.metadata (4.3 kB)
+#9 83.44 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.51.0,>=0.40.0->fastapi)
+#9 83.55   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 83.67 Collecting click>=7.0 (from uvicorn)
+#9 83.79   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+#9 83.86 Collecting h11>=0.8 (from uvicorn)
+#9 83.96   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 84.18 Collecting charset_normalizer<4,>=2 (from requests)
+#9 84.29   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 84.54 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 84.78   Downloading urllib3-2.6.2-py3-none-any.whl.metadata (6.6 kB)
+#9 84.86 Collecting certifi>=2017.4.17 (from requests)
+#9 84.96   Downloading certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+#9 85.06 Collecting httpcore==1.* (from httpx)
+#9 85.17   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#9 85.58 Collecting annotated-types>=0.6.0 (from pydantic>=2.7.0->fastapi)
+#9 85.69   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#9 87.19 Collecting pydantic-core==2.41.5 (from pydantic>=2.7.0->fastapi)
+#9 87.30   Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+#9 87.92 Collecting typing-inspection>=0.4.2 (from pydantic>=2.7.0->fastapi)
+#9 88.02   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+#9 88.18 Downloading fastapi-0.127.1-py3-none-any.whl (112 kB)
+#9 90.64 Downloading starlette-0.50.0-py3-none-any.whl (74 kB)
+#9 91.80 Downloading anyio-4.12.0-py3-none-any.whl (113 kB)
+#9 93.59 Downloading uvicorn-0.40.0-py3-none-any.whl (68 kB)
+#9 94.64 Downloading python_multipart-0.0.21-py3-none-any.whl (24 kB)
+#9 95.17 Downloading aiofiles-25.1.0-py3-none-any.whl (14 kB)
+#9 95.48 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 96.66 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 100.7 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 101.9 Downloading urllib3-2.6.2-py3-none-any.whl (131 kB)
+#9 103.4 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#9 104.1 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#9 106.2 Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+#9 379.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 170.1 kB/s  0:04:33
+#9 380.0 Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+#9 380.6 Downloading certifi-2025.11.12-py3-none-any.whl (159 kB)
+#9 381.6 Downloading click-8.3.1-py3-none-any.whl (108 kB)
+#9 382.5 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 383.2 Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+#9 384.7 Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#9 391.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 291.4 kB/s  0:00:06
+#9 392.0 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#9 392.8 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 394.8 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#9 394.9 Installing collected packages: urllib3, typing-extensions, python-multipart, numpy, idna, h11, click, charset_normalizer, certifi, annotated-types, annotated-doc, aiofiles, uvicorn, typing-inspection, requests, pydantic-core, httpcore, anyio, starlette, pydantic, httpx, fastapi
+#9 397.6 
+#9 397.6 Successfully installed aiofiles-25.1.0 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.12.0 certifi-2025.11.12 charset_normalizer-3.4.4 click-8.3.1 fastapi-0.127.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 numpy-2.4.0 pydantic-2.12.5 pydantic-core-2.41.5 python-multipart-0.0.21 requests-2.32.5 starlette-0.50.0 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.6.2 uvicorn-0.40.0
+#9 397.6 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 DONE 409.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:482db1a900fb438936e18e5599a40837334f29f3c2633178cc0351b316e445a0 done
+#10 naming to docker.io/library/beewaf:runtime done
+#10 DONE 0.3s
