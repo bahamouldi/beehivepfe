@@ -1,9 +1,0 @@
-{
-  "status": "ok",
-  "anomaly_detector_trained": true,
-  "rules_count": 9
-}
-hello world{"blocked":true,"reason":"regex-sqli"}
-HTTP_CODE:403
-{"blocked":true,"reason":"regex-xss"}
-HTTP_CODE:403

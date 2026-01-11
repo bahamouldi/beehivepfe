@@ -1,5 +1,0 @@
-health -> {'status': 'ok'}
-index -> {'service': 'BeeWAF', 'status': 'running'}
-echo benign -> 200 hello world
-echo sqli -> 403 {'blocked': True, 'reason': 'regex-sqli'}
-echo xss -> 403 {'blocked': True, 'reason': 'regex-xss'}

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  beewaf:
+    container_name: beewaf_sklearn
+    image: beewaf:sklearn
+    environment:
+      - BEEWAF_API_KEY=supersecret-beewaf-admin-key-2026
+    expose:
+      - "8000"
+    networks:
+      - beewaf-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: beewaf_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./k8s/tls:/etc/nginx/ssl:ro
+    depends_on:
+      - beewaf
+    networks:
+      - beewaf-network
+
+networks:
+  beewaf-network:
+    driver: bridge
