@@ -111,7 +111,18 @@ async def waf_middleware(request: Request, call_next):
     start_time = time.time()
     ACTIVE_REQUESTS.inc()
     
-    client = request.client.host if request.client else 'unknown'
+    # Get real client IP (check X-Original-IP, X-Real-IP or X-Forwarded-For header first for proxy/load balancer)
+    x_original_ip = request.headers.get('X-Original-IP')
+    x_real_ip = request.headers.get('X-Real-IP')
+    x_forwarded_for = request.headers.get('X-Forwarded-For')
+    if x_original_ip:
+        client = x_original_ip
+    elif x_real_ip:
+        client = x_real_ip
+    elif x_forwarded_for:
+        client = x_forwarded_for.split(',')[0].strip()
+    else:
+        client = request.client.host if request.client else 'unknown'
     path = request.url.path
     method = request.method
     query_string = str(request.url.query) if request.url.query else ''

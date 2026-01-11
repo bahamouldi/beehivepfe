@@ -14,7 +14,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-        labels: "service"
     labels:
       service: "beewaf"
     networks:
