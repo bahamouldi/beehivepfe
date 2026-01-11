@@ -5,11 +5,46 @@ import logging
 import os
 import secrets
 import time
+import json
+from datetime import datetime
+from pythonjsonlogger import jsonlogger
 from prometheus_client import Counter, Histogram, Gauge, generate_latest, CONTENT_TYPE_LATEST
 
 from waf import rules
 from waf import anomaly
 from waf.ratelimit import RateLimiter
+
+# JSON Logging Configuration for ELK Stack
+class CustomJsonFormatter(jsonlogger.JsonFormatter):
+    def add_fields(self, log_record, record, message_dict):
+        super(CustomJsonFormatter, self).add_fields(log_record, record, message_dict)
+        log_record['@timestamp'] = datetime.utcnow().isoformat() + 'Z'
+        log_record['service'] = 'beewaf'
+        log_record['level'] = record.levelname
+        log_record['logger_name'] = record.name
+
+def setup_logging():
+    logger = logging.getLogger("beewaf")
+    logger.setLevel(logging.INFO)
+    
+    # Console handler with JSON format (for Docker logs -> Logstash)
+    console_handler = logging.StreamHandler()
+    formatter = CustomJsonFormatter(
+        '%(message)s'
+    )
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+    
+    # Also configure root logger for uvicorn
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    root_logger.addHandler(console_handler)
+    
+    return logger
+
+log = setup_logging()
 
 # Prometheus Metrics
 REQUESTS_TOTAL = Counter(
@@ -41,8 +76,6 @@ MODEL_LOADED = Gauge(
 )
 
 app = FastAPI()
-log = logging.getLogger("beewaf")
-logging.basicConfig(level=logging.INFO)
 
 rate_limiter = RateLimiter(max_requests=10, window_seconds=60)
 MODEL_PATH = os.environ.get('BEEWAF_MODEL_PATH','models/model.pkl')
@@ -81,6 +114,10 @@ async def waf_middleware(request: Request, call_next):
     client = request.client.host if request.client else 'unknown'
     path = request.url.path
     method = request.method
+    query_string = str(request.url.query) if request.url.query else ''
+    
+    # Combine path and query for WAF checking
+    full_path = f"{path}?{query_string}" if query_string else path
     
     # Skip metrics endpoint from WAF processing
     if path == '/metrics':
@@ -98,15 +135,31 @@ async def waf_middleware(request: Request, call_next):
 
     allowed, remaining = rate_limiter.allow_request(client)
     if not allowed:
+        log.warning('Request blocked', extra={
+            'event': 'blocked',
+            'client_ip': client,
+            'method': method,
+            'path': path,
+            'reason': 'rate-limit',
+            'status_code': 429
+        })
         BLOCKED_TOTAL.labels(reason='rate-limit').inc()
         REQUESTS_TOTAL.labels(method=method, endpoint=path, status='429').inc()
         REQUEST_LATENCY.labels(method=method, endpoint=path).observe(time.time() - start_time)
         ACTIVE_REQUESTS.dec()
         return JSONResponse(status_code=429, content={"blocked": True, "reason": "rate-limit"})
 
-    blocked, reason = rules.check_regex_rules(path, body_text, dict(request.headers))
+    blocked, reason = rules.check_regex_rules(full_path, body_text, dict(request.headers))
     if blocked:
-        log.info('Blocked by regex rule: %s %s %s', client, path, reason)
+        log.warning('Request blocked', extra={
+            'event': 'blocked',
+            'client_ip': client,
+            'method': method,
+            'path': path,
+            'reason': reason,
+            'status_code': 403,
+            'body_preview': body_text[:200] if body_text else ''
+        })
         BLOCKED_TOTAL.labels(reason=reason).inc()
         REQUESTS_TOTAL.labels(method=method, endpoint=path, status='403').inc()
         REQUEST_LATENCY.labels(method=method, endpoint=path).observe(time.time() - start_time)
@@ -115,8 +168,15 @@ async def waf_middleware(request: Request, call_next):
 
     # anomaly detection
     try:
-        if anomaly.is_anomaly_for_request(path, body_text, dict(request.headers)):
-            log.info('Blocked by anomaly detector: %s %s', client, path)
+        if anomaly.is_anomaly_for_request(full_path, body_text, dict(request.headers)):
+            log.warning('Request blocked', extra={
+                'event': 'blocked',
+                'client_ip': client,
+                'method': method,
+                'path': path,
+                'reason': 'anomaly',
+                'status_code': 403
+            })
             BLOCKED_TOTAL.labels(reason='anomaly').inc()
             REQUESTS_TOTAL.labels(method=method, endpoint=path, status='403').inc()
             REQUEST_LATENCY.labels(method=method, endpoint=path).observe(time.time() - start_time)
@@ -127,8 +187,17 @@ async def waf_middleware(request: Request, call_next):
 
     # passthrough
     response = await call_next(request)
+    latency = time.time() - start_time
+    log.info('Request processed', extra={
+        'event': 'request',
+        'client_ip': client,
+        'method': method,
+        'path': path,
+        'status_code': response.status_code,
+        'latency_ms': round(latency * 1000, 2)
+    })
     REQUESTS_TOTAL.labels(method=method, endpoint=path, status=str(response.status_code)).inc()
-    REQUEST_LATENCY.labels(method=method, endpoint=path).observe(time.time() - start_time)
+    REQUEST_LATENCY.labels(method=method, endpoint=path).observe(latency)
     ACTIVE_REQUESTS.dec()
     return response
 
