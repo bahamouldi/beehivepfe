@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt ./
 # Install core Python dependencies explicitly to avoid failing on optional packages
 RUN pip install --no-cache-dir -U pip setuptools wheel && \
-    pip install --no-cache-dir fastapi==0.95.2 uvicorn==0.22.0 python-multipart aiofiles requests httpx numpy scikit-learn || true
+    pip install --no-cache-dir fastapi uvicorn python-multipart aiofiles requests httpx numpy scikit-learn joblib python-json-logger prometheus-client
 
 COPY . /app
 ENV PYTHONUNBUFFERED=1

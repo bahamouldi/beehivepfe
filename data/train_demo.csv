@@ -1,5 +1,41 @@
 path,body,headers,label
-/index.html,hello world,"{'User-Agent':'test'}",0
-/login,username=admin&password=12345,"{'User-Agent':'curl'}",0
-/echo,<script>alert(1)</script>,"{'User-Agent':'curl'}",1
-/search,1 OR 1=1,"{'User-Agent':'sqlmap'}",1
+/index.html,hello world,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/login,username=admin&password=12345,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/api/users,{"name":"John","email":"john@example.com"},"{\"Content-Type\":\"application/json\"}",0
+/search,query=python+tutorial,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/products,category=electronics&page=1,"{\"User-Agent\":\"Chrome\"}",0
+/contact,name=Jane&message=Hello,"{\"User-Agent\":\"Firefox\"}",0
+/api/data,{"id":123,"action":"view"},"{\"Content-Type\":\"application/json\"}",0
+/profile,user_id=456,"{\"User-Agent\":\"Safari\"}",0
+/settings,theme=dark&lang=en,"{\"User-Agent\":\"Edge\"}",0
+/checkout,cart_id=789&step=1,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/api/v1/items,{"filter":"active","limit":10},"{\"Content-Type\":\"application/json\"}",0
+/register,email=test@test.com&password=secret123,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/feedback,rating=5&comment=Great,"{\"User-Agent\":\"Chrome\"}",0
+/api/orders,{"order_id":"ORD-001"},"{\"Content-Type\":\"application/json\"}",0
+/newsletter,email=subscriber@mail.com,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/download,file_id=100,"{\"User-Agent\":\"Wget\"}",0
+/api/status,{},"{\"Content-Type\":\"application/json\"}",0
+/help,topic=faq,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/about,section=team,"{\"User-Agent\":\"Chrome\"}",0
+/pricing,plan=basic,"{\"User-Agent\":\"Firefox\"}",0
+/docs,page=getting-started,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/support,ticket_type=general,"{\"User-Agent\":\"Chrome\"}",0
+/api/notifications,{"user":"123"},"{\"Content-Type\":\"application/json\"}",0
+/preferences,notifications=true&email=weekly,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/upload,file_name=document.pdf,"{\"Content-Type\":\"multipart/form-data\"}",0
+/api/auth/refresh,{"token":"abc123"},"{\"Content-Type\":\"application/json\"}",0
+/dashboard,view=summary,"{\"User-Agent\":\"Chrome\"}",0
+/reports,date=2026-01-29,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/export,format=csv&data=sales,"{\"User-Agent\":\"Firefox\"}",0
+/import,source=file,"{\"User-Agent\":\"Chrome\"}",0
+/admin,action=view,"{\"User-Agent\":\"Admin-Panel\"}",0
+/api/health,{},"{\"User-Agent\":\"HealthChecker\"}",0
+/metrics,format=prometheus,"{\"User-Agent\":\"Prometheus\"}",0
+/logout,session_id=xyz789,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/verify,token=verification123,"{\"User-Agent\":\"Chrome\"}",0
+/reset,email=user@example.com,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/confirm,code=ABC123,"{\"User-Agent\":\"Firefox\"}",0
+/cancel,subscription_id=SUB001,"{\"User-Agent\":\"Chrome\"}",0
+/renew,license_key=LIC-XYZ,"{\"User-Agent\":\"Mozilla/5.0\"}",0
+/activate,product_code=PROD123,"{\"User-Agent\":\"Safari\"}",0

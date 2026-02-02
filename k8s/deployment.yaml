@@ -22,7 +22,7 @@ spec:
         - name: BEEWAF_MODEL_PATH
           value: "/app/models/model.pkl"
         - name: BEEWAF_TRAIN_DATA
-          value: "/app/data/train_kaggle.csv"
+          value: "/app/data/train_demo.csv"
         resources:
           requests:
             cpu: "100m"

@@ -22,7 +22,7 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-        sh "docker build -t ${DOCKER_IMAGE} -f Dockerfile.final ."
+        sh "docker build -t ${DOCKER_IMAGE} -f Dockerfile.full ."
       }
     }
     stage('Integration Test') {

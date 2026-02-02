@@ -8,11 +8,29 @@ SQLI_PATTERNS = [
     r"--",
     r"/\*.*\*/",
     r"\bor\b\s+\d+\s*=",
-    r"'.*or.*'.*'.*=.*'",  # NEW: Détecte 1' OR '1'='1
-    r"\bsleep\s*\(",  # NEW: Time-based blind SLEEP(5)
-    r"\bbenchmark\s*\(",  # NEW: Time-based blind BENCHMARK
-    r"\bwaitfor\b.*\bdelay\b",  # NEW: MSSQL WAITFOR DELAY
-    r"\bexec\b|\bexecute\b",  # NEW: EXEC/EXECUTE commands
+    r"'.*or.*'.*'.*=.*'",  # Détecte 1' OR '1'='1
+    r"\bsleep\s*\(",  # Time-based blind SLEEP(5)
+    r"\bbenchmark\s*\(",  # Time-based blind BENCHMARK
+    r"\bwaitfor\b.*\bdelay\b",  # MSSQL WAITFOR DELAY
+    r"\bexec\b|\bexecute\b",  # EXEC/EXECUTE commands
+    r"\|\|",  # SQL concatenation operator ||
+    r"0x[0-9a-f]{6,}",  # Hex encoding (0x73656c656374)
+    r"\bascii\s*\(",  # ASCII-based blind SQLi
+    r"\bsubstring\s*\(",  # SUBSTRING extraction
+    r"[\u1d00-\u1d7f]{4,}",  # Unicode small caps block (ᴜɴɪᴏɴ)
+    r"[\ua71f-\ua7ff]",  # Unicode Latin Extended-D
+    # Additional SQL patterns
+    r"#",  # MySQL comment
+    r"\binto\s+outfile\b",  # INTO OUTFILE
+    r"\binto\s+dumpfile\b",  # INTO DUMPFILE
+    r"\bload_file\s*\(",  # LOAD_FILE()
+    r"\binformation_schema\b",  # information_schema
+    r"\bsysobjects\b",  # SQL Server sysobjects
+    r"\bsyscolumns\b",  # SQL Server syscolumns
+    r"\bpg_tables\b",  # PostgreSQL pg_tables
+    r"\bpg_catalog\b",  # PostgreSQL pg_catalog
+    r"\bxp_cmdshell\b",  # SQL Server xp_cmdshell
+    r"\bxp_regread\b",  # SQL Server xp_regread
 ]
 
 # ==================== XSS PATTERNS ====================
@@ -21,11 +39,30 @@ XSS_PATTERNS = [
     r"onerror\s*=",
     r"javascript:\s*",
     r"<img\s+src=",
-    r"<svg[^>]*onload",  # NEW: <svg/onload=alert(1)>
-    r"<iframe[^>]*src",  # NEW: <iframe src=...>
-    r"<object[^>]*data",  # NEW: <object data=...>
-    r"<embed[^>]*src",  # NEW: <embed src=...>
-    r"on\w+\s*=",  # NEW: All event handlers (onclick, onerror, etc.)
+    r"<svg[^>]*onload",  # <svg/onload=alert(1)>
+    r"<iframe[^>]*src",  # <iframe src=...>
+    r"<object[^>]*data",  # <object data=...>
+    r"<embed[^>]*src",  # <embed src=...>
+    r"on\w+\s*=",  # All event handlers (onclick, onerror, etc.)
+    r"\[\]\[",  # JSFuck obfuscation patterns
+    r"\(\!\[\]\+\[\]\)",  # JSFuck patterns (![]+[])
+    r"\\x[0-9a-f]{2}",  # Hex escape sequences
+    r"data:text/html",  # Data URI XSS
+    r"data:image/svg\+xml",  # SVG data URI
+    r"location\.(hash|href|search)",  # DOM manipulation
+    r"document\.(cookie|domain|referrer)",  # Document manipulation
+    r"expression\s*\(",  # CSS expression injection
+    r"vbscript:",  # VBScript protocol
+    r"mhtml:",  # MHTML protocol
+    # Additional XSS patterns
+    r"\beval\s*\(",  # eval()
+    r"\.innerHTML\s*=",  # innerHTML assignment
+    r"\.outerHTML\s*=",  # outerHTML assignment
+    r"\.write\s*\(",  # document.write()
+    r"\.writeln\s*\(",  # document.writeln()
+    r"fromCharCode",  # String.fromCharCode()
+    r"atob\s*\(",  # atob() base64 decode
+    r"btoa\s*\(",  # btoa() base64 encode
 ]
 
 # ==================== COMMAND INJECTION PATTERNS ====================
@@ -35,6 +72,38 @@ CMDI_PATTERNS = [
     r"\$\(.*\)",  # Command substitution: $(whoami)
     r"%0a|%0d",  # Newline injection
     r"\|\s*(grep|awk|sed|sort|uniq|head|tail|cut)",  # Pipe with Unix commands
+    r"\$IFS",  # FIXED: IFS variable manipulation
+    r"\$\d+",  # FIXED: Positional parameters ($1, $9)
+    r"\$PATH|\$HOME|\$USER",  # FIXED: Environment variables
+    r"\\[a-z]",  # FIXED: Backslash escaping (c\at)
+    r"\{[a-z]+,[^}]+\}",  # FIXED: Brace expansion {cat,/etc/passwd}
+    # Shell interpreters and dangerous commands
+    r"/bin/(ba)?sh\b",  # /bin/sh, /bin/bash
+    r"/usr/bin/(ba)?sh\b",  # /usr/bin/sh, /usr/bin/bash
+    r"\bpython[23]?\s+-c",  # python -c, python2 -c, python3 -c
+    r"\bperl\s+-e",  # perl -e
+    r"\bruby\s+-e",  # ruby -e
+    r"\bphp\s+-r",  # php -r
+    r"\bnc\s+-[elp]",  # nc -e, nc -l, nc -p (netcat reverse shell)
+    r"\bncat\s",  # ncat
+    r"\bwget\s+https?://",  # wget http://
+    r"\bcurl\s+https?://",  # curl http://
+    r"\bfetch\s+https?://",  # fetch http:// (BSD)
+    # Additional command patterns
+    r"\bping\b.*-[cn]",  # ping -c / ping -n
+    r"\bnslookup\b",  # nslookup command
+    r"\bdig\b",  # dig command
+    r"\btraceroute\b",  # traceroute
+    r"\bnetcat\b",  # netcat
+    r"\btelnet\b",  # telnet
+    r"\bftp\b\s",  # ftp command
+    r"\bssh\b\s",  # ssh command
+    r"\bchmod\b",  # chmod
+    r"\bchown\b",  # chown
+    r"\brm\b\s+-[rf]",  # rm -rf
+    r"\bmkdir\b",  # mkdir
+    r"\btouch\b",  # touch
+    r"\bkill\b\s+-\d",  # kill -9
 ]
 
 # ==================== PATH TRAVERSAL / LFI PATTERNS ====================
@@ -45,8 +114,17 @@ PATH_TRAVERSAL_PATTERNS = [
     r"\.\.\.\./+|\.\.\.\.\\+",  # Double slash evasion: ....//
     r"/etc/passwd|/etc/shadow|/etc/hosts",  # Unix sensitive files
     r"c:\\windows\\|c:/windows/",  # Windows paths
+    r"\\\\\\\\[0-9.]+",  # FIXED: UNC paths (\\127.0.0.1)
+    r"\\\\[a-z0-9.-]+\\c\$",  # FIXED: Windows admin shares (\\host\c$)
+    # NEW: UTF-8 overlong encoding bypass prevention
+    r"%c0%ae|%c0%af",  # UTF-8 overlong encoding for . and /
+    r"%c1%1c|%c1%9c",  # UTF-8 overlong encoding variants
+    r"%e0%80%ae",  # 3-byte overlong encoding for .
+    r"%f0%80%80%ae",  # 4-byte overlong encoding for .
+    r"%252e|%252f",  # Double URL encoding
+    r"\.\.;/",  # Tomcat path traversal bypass
+    r"/\.\./",  # Normalized traversal
 ]
-
 # ==================== SSRF PATTERNS ====================
 SSRF_PATTERNS = [
     r"169\.254\.169\.254",  # AWS metadata
@@ -54,13 +132,44 @@ SSRF_PATTERNS = [
     r"(url|target|redirect|proxy|host|src|href).*?(localhost|127\.0\.0\.1)",  # Loopback in parameters
     r"file:///",  # File protocol
     r"(gopher|dict|ftp)://",  # Alternative protocols
+    # Private network ranges (RFC 1918)
+    r"://10\.\d{1,3}\.\d{1,3}\.\d{1,3}",  # 10.0.0.0/8
+    r"://192\.168\.\d{1,3}\.\d{1,3}",  # 192.168.0.0/16
+    r"://172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}",  # 172.16.0.0/12
+    # Loopback and special addresses
+    r"://localhost(?![a-zA-Z0-9])",  # Direct localhost access (negative lookahead)
+    r"://127\.\d{1,3}\.\d{1,3}\.\d{1,3}",  # Entire 127.0.0.0/8 range
+    r"://0\.0\.0\.0(?![0-9])",  # 0.0.0.0 wildcard (negative lookahead)
+    r"://\[::1\]",  # IPv6 loopback
+    r"://\[0:0:0:0:0:0:0:1\]",  # IPv6 loopback full
+    r"://\[::ffff:127\.0\.0\.1\]",  # IPv6 mapped IPv4
+    r"://2130706433\b",  # Decimal IP for 127.0.0.1
+    r"://0177\.0+\.0+\.0*1\b",  # Octal IP variations
+    r"://017700000001\b",  # Octal IP compact
+    r"://0x7f\.0x0\.0x0\.0x1\b",  # Hex IP dotted
+    r"://0x7f000001\b",  # Hex IP compact
+    r"ldap://",  # LDAP protocol SSRF
+    r"ldaps://",  # LDAPS protocol
+    r"tftp://",  # TFTP protocol
+    r"netdoc://",  # netdoc protocol
+    r"jar:http",  # JAR URL scheme
+    r"\.(burpcollaborator|oastify|interact\.sh|dnslog)\.com",  # DNS rebinding/OAST
+    r"@localhost\b",  # URL with @ before localhost
+    r"@127\.0\.0\.1\b",  # URL with @ before IP
+    r"\blocaltest\.me\b",  # localhost alternative domains
+    r"\bvcap\.me\b",  # localhost alternative
+    r"\blvh\.me\b",  # localhost alternative
+    r"\bnip\.io\b",  # wildcard DNS
+    r"\bxip\.io\b",  # wildcard DNS
+    r"\bsslip\.io\b",  # wildcard DNS
 ]
 
 # ==================== XXE PATTERNS ====================
 XXE_PATTERNS = [
     r"<!ENTITY",  # XML Entity declaration
-    r"<!DOCTYPE.*\[",  # DOCTYPE with DTD
+    r"<!DOCTYPE\s+\w",  # DOCTYPE declaration (any DOCTYPE with name)
     r"SYSTEM\s+[\"']file://",  # External entity: file://
+    r"PUBLIC\s+[\"']",  # PUBLIC external entity
 ]
 
 # ==================== LDAP INJECTION PATTERNS ====================
@@ -69,6 +178,16 @@ LDAP_PATTERNS = [
     r"\)\(\|",  # )(| LDAP injection
     r"\*\)\(",  # *)( LDAP wildcard injection
     r"\(&\(",  # (&( LDAP AND injection
+    r"\)\(uid=",  # )(uid= filter injection
+    r"\)\(cn=",  # )(cn= filter injection
+    r"\)\(password",  # )(password filter injection
+    r"objectClass\s*=",  # objectClass query
+    r"\)\(objectClass",  # )(objectClass=*) injection
+    r"\(objectClass=\*\)",  # Full objectClass pattern
+    r"\|\(cn=",  # |cn= OR injection
+    r"\|\(uid=",  # |uid= OR injection
+    r"\bunionall\b",  # LDAP union
+    r"\bnull\)\(",  # Null termination
 ]
 
 # ==================== NOSQL INJECTION PATTERNS ====================
@@ -77,6 +196,21 @@ NOSQL_PATTERNS = [
     r"\[\s*\$\w+\s*\]",  # [$ne], [$regex], etc.
     r"\{\s*['\"]?\$where['\"]?\s*:",  # $where queries
     r"sleep\s*\(\s*\d+\s*\)",  # sleep(5000)
+    r"\$ne\b|\$gt\b|\$lt\b|\$gte\b|\$lte\b",  # FIXED: NoSQL operators
+    r":\s*\{\s*\"\$ne\"\s*:\s*null\s*\}",  # FIXED: {"$ne": null} pattern
+    # NEW: Additional NoSQL patterns
+    r"\$regex\b",  # $regex operator
+    r"\$options\b",  # $options (used with $regex)
+    r"\$exists\b",  # $exists operator
+    r"\$type\b",  # $type operator
+    r"\$or\s*:\s*\[",  # $or array
+    r"\$and\s*:\s*\[",  # $and array
+    r"\$not\s*:",  # $not operator
+    r"\$nin\b",  # $nin (not in)
+    r"\$in\s*:\s*\[",  # $in array
+    r"\$elemMatch\b",  # $elemMatch
+    r"\$comment\b",  # $comment (info leak)
+    r"\{\s*\"\$regex\"\s*:",  # JSON format $regex
 ]
 
 # ==================== LOG4SHELL/JNDI INJECTION PATTERNS ====================
@@ -85,6 +219,24 @@ JNDI_PATTERNS = [
     r"\$\{jndi:ldap://",
     r"\$\{jndi:rmi://",
     r"\$\{jndi:dns://",
+    # NEW: JNDI obfuscation bypass patterns
+    r"\$\{.*j.*n.*d.*i.*:",  # Any chars between j-n-d-i
+    r"j\]?n\[?d\]?i",  # Bracket obfuscation: j]n[d]i
+    r"\$\{\$\{.*\}.*ndi",  # Nested lookup: ${${lower:j}ndi
+    r"\$\{lower:j\}",  # ${lower:j} Log4j lookup
+    r"\$\{upper:j\}",  # ${upper:J} Log4j lookup
+    r"\$\{lower:n\}",  # ${lower:n}
+    r"\$\{env:.*\}.*ndi",  # Environment variable lookup
+    r"\$\{base64:.*\}",  # Base64 lookup
+    r"\$\{date:.*\}",  # Date lookup
+    r"\$\{ctx:.*\}",  # Context lookup
+    r"\$\{java:.*\}",  # Java lookup
+    r"\$\{bundle:.*\}",  # Bundle lookup  
+    r"\$\{main:.*\}",  # Main arguments lookup
+    r"\$\{sys:.*\}",  # System property lookup
+    r"\$\{\:\-j\}",  # Default value obfuscation
+    r"j\$\{.*\}ndi",  # Injection in middle
+    r"jn\$\{.*\}di",  # Injection in middle variant
 ]
 
 # ==================== PHP FILTER/WRAPPER PATTERNS ====================
@@ -105,6 +257,9 @@ SSTI_PATTERNS = [
     r"<\%.*\%>",  # <%...%>
     r"\{\{.*config.*\}\}",  # {{config}}
     r"\{\{.*self.*\}\}",  # {{self}}
+    r"#\{.*\}",  # Ruby #{...} interpolation
+    r"\{\{.*\}\}",  # Generic Jinja2/Twig {{...}}
+    r"\$\{[^}]+\}",  # Generic ${...} expressions
 ]
 
 # ==================== JSP CODE INJECTION PATTERNS ====================
@@ -133,6 +288,9 @@ PYTHON_INJECTION_PATTERNS = [
     r"os\.system",  # os.system('cmd')
     r"subprocess\.",  # subprocess.call, subprocess.Popen
     r"commands\.",  # commands.getoutput
+    r"__init__\.__globals__",  # FIXED: Python introspection
+    r"__class__\.__bases__",  # FIXED: Class introspection
+    r"\{[a-z_]+\.__[a-z_]+__",  # FIXED: Format string with dunder methods
 ]
 
 # ==================== JAVA/JAR PROTOCOL PATTERNS ====================
@@ -158,6 +316,18 @@ DESERIALIZATION_PATTERNS = [
     r"a:\d+:",  # PHP serialized array: a:2:{...}
     r"rO0AB",  # Java serialized (base64 encoded)
     r"\xac\xed\x00\x05",  # Java serialization magic bytes
+]
+
+# ==================== PROTOTYPE POLLUTION PATTERNS ====================
+PROTOTYPE_POLLUTION_PATTERNS = [
+    r"__proto__",  # JavaScript prototype pollution
+    r"constructor\s*\[\s*['\"]?prototype",  # constructor["prototype"] or constructor[prototype]
+    r"\[\s*['\"]__proto__['\"]?\s*\]",  # ["__proto__"] or [__proto__]
+    r"prototype\s*\[\s*['\"]?\w+['\"]?\s*\]",  # prototype["x"] or prototype[x]
+    r"Object\.assign\s*\(",  # Object.assign pollution
+    r"\$\.extend\s*\(",  # jQuery extend pollution
+    r"_\.merge\s*\(",  # Lodash merge pollution
+    r"_\.defaultsDeep\s*\(",  # Lodash defaultsDeep
 ]
 
 # ==================== BRUTE FORCE PATTERNS ====================
@@ -201,6 +371,8 @@ for p in GRAPHQL_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'graphql'))
 for p in DESERIALIZATION_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'deserialization'))
+for p in PROTOTYPE_POLLUTION_PATTERNS:
+    _default_compiled.append((re.compile(p, re.IGNORECASE), 'prototype-pollution'))
 for p in BRUTE_PATTERNS:
     _default_compiled.append((re.compile(p, re.IGNORECASE), 'brute'))
 

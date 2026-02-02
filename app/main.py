@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException, Depends, Header
-from fastapi.responses import JSONResponse, Response, HTMLResponse, RedirectResponse
+from fastapi.responses import JSONResponse, Response
 from fastapi.security import APIKeyHeader
 import logging
 import os
@@ -26,6 +26,11 @@ class CustomJsonFormatter(jsonlogger.JsonFormatter):
 def setup_logging():
     logger = logging.getLogger("beewaf")
     logger.setLevel(logging.INFO)
+    logger.propagate = False  # Prevent duplicate logs to root logger
+    
+    # Clear existing handlers to prevent duplicates on reload
+    if logger.handlers:
+        logger.handlers.clear()
     
     # Console handler with JSON format (for Docker logs -> Logstash)
     console_handler = logging.StreamHandler()
@@ -34,13 +39,6 @@ def setup_logging():
     )
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
-    
-    # Also configure root logger for uvicorn
-    root_logger = logging.getLogger()
-    root_logger.setLevel(logging.INFO)
-    for handler in root_logger.handlers[:]:
-        root_logger.removeHandler(handler)
-    root_logger.addHandler(console_handler)
     
     return logger
 
@@ -77,58 +75,9 @@ MODEL_LOADED = Gauge(
 
 app = FastAPI()
 
-rate_limiter = RateLimiter(max_requests=10, window_seconds=60)
+rate_limiter = RateLimiter(max_requests=10, window_seconds=60)  # 10 req/min per IP
 MODEL_PATH = os.environ.get('BEEWAF_MODEL_PATH','models/model.pkl')
 TRAIN_DATA = os.environ.get('BEEWAF_TRAIN_DATA','data/train_demo.csv')
-
-# --- Simple Anti-Bot / JS Challenge ---
-ANTI_BOT_COOKIE = os.environ.get('ANTI_BOT_COOKIE', 'beewaf_challenge')
-ANTI_BOT_SECRET = os.environ.get('ANTI_BOT_SECRET', 'change-me')
-ANTI_BOT_TTL = int(os.environ.get('ANTI_BOT_TTL', '60'))  # seconds
-
-
-def _make_challenge_token(client_ip: str, timestamp: int) -> str:
-    import hmac, hashlib
-    msg = f"{client_ip}|{timestamp}".encode()
-    sig = hmac.new(ANTI_BOT_SECRET.encode(), msg, hashlib.sha256).hexdigest()
-    return f"{timestamp}:{sig}"
-
-
-def _verify_challenge_token(client_ip: str, token: str) -> bool:
-    import hmac
-    try:
-        parts = token.split(":")
-        if len(parts) != 2:
-            return False
-        ts = int(parts[0])
-        sig = parts[1]
-        if abs(time.time() - ts) > ANTI_BOT_TTL:
-            return False
-        expected = _make_challenge_token(client_ip, ts).split(":", 1)[1]
-        return hmac.compare_digest(expected, sig)
-    except Exception:
-        return False
-
-
-@app.get('/beewaf/challenge', response_class=HTMLResponse)
-async def challenge_page(request: Request):
-    # Serve small JS challenge: sets cookie then redirects to 'r' (return) param
-    client_ip = request.headers.get('X-Original-IP') or request.headers.get('X-Real-IP') or (request.client.host if request.client else 'unknown')
-    ts = int(time.time())
-    token = _make_challenge_token(client_ip, ts)
-    return_url = request.query_params.get('r', '/')
-    html = f'''<!doctype html>
-<html><head><meta charset="utf-8"><title>Checking...</title></head>
-<body>
-<script>
-  document.cookie = "{ANTI_BOT_COOKIE}={token}; path=/; max-age={ANTI_BOT_TTL}; SameSite=Lax";
-  const r = decodeURIComponent('{return_url}');
-  setTimeout(()=>{{ location.href = r }}, 300);
-</script>
-<p>Checking your browser, please wait...</p>
-</body></html>'''
-    return HTMLResponse(content=html, status_code=200)
-
 
 # API Key Authentication
 API_KEY = os.environ.get('BEEWAF_API_KEY', 'changeme-default-key-not-secure')
@@ -179,8 +128,8 @@ async def waf_middleware(request: Request, call_next):
     # Combine path and query for WAF checking
     full_path = f"{path}?{query_string}" if query_string else path
     
-    # Skip metrics endpoint from WAF processing
-    if path == '/metrics':
+    # Skip health, metrics, and root endpoints from WAF processing (but NOT root with parameters!)
+    if path in ['/metrics', '/health', '/'] and not query_string:
         ACTIVE_REQUESTS.dec()
         return await call_next(request)
     
@@ -208,20 +157,6 @@ async def waf_middleware(request: Request, call_next):
         REQUEST_LATENCY.labels(method=method, endpoint=path).observe(time.time() - start_time)
         ACTIVE_REQUESTS.dec()
         return JSONResponse(status_code=429, content={"blocked": True, "reason": "rate-limit"})
-
-    # Anti-bot challenge: detect simple bot UA strings and require JS challenge
-    try:
-        if not path.startswith('/beewaf'):
-            ua = (request.headers.get('User-Agent') or '').lower()
-            suspicious = (ua == '' or any(tok in ua for tok in ['bot', 'spider', 'crawler', 'curl', 'python-requests', 'wget', 'scrapy']))
-            if suspicious:
-                cookie = request.cookies.get(ANTI_BOT_COOKIE)
-                if not (cookie and _verify_challenge_token(client, cookie)):
-                    from urllib.parse import quote_plus
-                    return RedirectResponse(url=f"/beewaf/challenge?r={quote_plus(str(request.url))}", status_code=307)
-    except Exception:
-        # do not disrupt normal flow on error
-        log.exception('Anti-bot check error')
 
     blocked, reason = rules.check_regex_rules(full_path, body_text, dict(request.headers))
     if blocked:

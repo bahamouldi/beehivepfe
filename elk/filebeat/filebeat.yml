@@ -5,15 +5,11 @@ filebeat.inputs:
     processors:
       - add_docker_metadata:
           host: "unix:///var/run/docker.sock"
-      - decode_json_fields:
-          fields: ["message"]
-          target: ""
-          overwrite_keys: true
-
-    # Only collect logs from beewaf container
-    condition:
-      contains:
-        docker.container.name: "beewaf_sklearn"
+      - drop_event:
+          when:
+            not:
+              equals:
+                container.name: "beewaf_sklearn"
 
 output.logstash:
   hosts: ["logstash:5044"]

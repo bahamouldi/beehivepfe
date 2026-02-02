@@ -6,6 +6,8 @@ services:
     image: beewaf:sklearn
     environment:
       - BEEWAF_API_KEY=supersecret-beewaf-admin-key-2026
+    ports:
+      - "8000:8000"
     expose:
       - "8000"
     networks:
